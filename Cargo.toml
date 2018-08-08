@@ -1,0 +1,17 @@
+[package]
+name = "libripgrep_example"
+version = "0.1.0"
+authors = ["Jesse Grosjean <jesse@hogbaysoftware.com>"]
+
+[dependencies]
+num_cpus = "1.8"
+crossbeam = "0.4.1"
+grep = { version = "0.2.0", path = "./crates/grep" }
+grep-matcher = { version = "0.0.1", path = "./crates/grep-matcher" }
+grep-regex = { version = "0.0.1", path = "./crates/grep-regex" }
+grep-searcher = { version = "0.0.1", path = "./crates/grep-searcher" }
+ignore = { version = "0.4.0", path = "./crates/ignore" }
+
+[features]
+avx-accel = ["grep/avx-accel"]
+simd-accel = ["grep/simd-accel"]
